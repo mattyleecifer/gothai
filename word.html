@@ -1,0 +1,22 @@
+<html>
+    {{if .Success}}
+    <h1 style="background-color:MediumSeaGreen;">Success!</h1>
+    {{else}}
+    <h1 style="background-color:Tomato;">Incorrect</h1>
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+    </script>
+    {{end}}
+<form method="POST">
+<img src="\consonants\{{ .Ans }}.png"><p>
+<input type="hidden" name="img" value="{{ .Ans }}">
+<input name="input" type="submit" value="{{ .Opt1 }}" text="{{ .Opt1 }}" style="font-size : 30px;">
+<input name="input" type="submit" value="{{ .Opt2 }}" text="{{ .Opt2 }}" style="font-size : 30px;">
+<input name="input" type="submit" value="{{ .Opt3 }}" text="{{ .Opt3 }}" style="font-size : 30px;">
+<input name="input" type="submit" value="{{ .Opt4 }}" text="{{ .Opt4 }}" style="font-size : 30px;">
+</form>
+</html>
